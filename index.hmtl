@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ShopEase - E-Commerce</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+    header {
+      background: #2c3e50;
+      color: white;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 1.5rem;
+    }
+    nav a {
+      color: white;
+      margin-left: 20px;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .hero {
+      background: linear-gradient(to right, #3498db, #9b59b6);
+      color: white;
+      text-align: center;
+      padding: 60px 20px;
+    }
+    .hero h2 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+    .hero p {
+      font-size: 1.2rem;
+    }
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 40px;
+    }
+    .card {
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: transform 0.2s;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+    }
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    .card-content {
+      padding: 15px;
+    }
+    .card-content h3 {
+      margin: 0 0 10px;
+      font-size: 1.2rem;
+    }
+    .card-content p {
+      margin: 0 0 15px;
+      color: #555;
+    }
+    .price {
+      font-weight: bold;
+      color: #27ae60;
+    }
+    .btn {
+      display: inline-block;
+      padding: 10px 15px;
+      background: #3498db;
+      color: white;
+      border-radius: 4px;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+    .btn:hover {
+      background: #2980b9;
+    }
+    footer {
+      background: #2c3e50;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>ShopEase</h1>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Products</a>
+      <a href="#">Cart</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Welcome to ShopEase</h2>
+    <p>Your one-stop shop for amazing products</p>
+  </section>
+
+  <section class="products">
+    <div class="card">
+      <img src="https://via.placeholder.com/400x200?text=Smartphone" alt="Smartphone">
+      <div class="card-content">
+        <h3>Smartphone</h3>
+        <p>Latest model with high performance and sleek design.</p>
+        <p class="price">$699</p>
+        <a href="#" class="btn" onclick="addToCart('Smartphone')">Add to Cart</a>
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://via.placeholder.com/400x200?text=Headphones" alt="Headphones">
+      <div class="card-content">
+        <h3>Wireless Headphones</h3>
+        <p>Noise-cancelling headphones with superior sound quality.</p>
+        <p class="price">$199</p>
+        <a href="#" class="btn" onclick="addToCart('Headphones')">Add to Cart</a>
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://via.placeholder.com/400x200?text=Laptop" alt="Laptop">
+      <div class="card-content">
+        <h3>Laptop</h3>
+        <p>Powerful laptop for work, gaming, and entertainment.</p>
+        <p class="price">$999</p>
+        <a href="#" class="btn" onclick="addToCart('Laptop')">Add to Cart</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2026 ShopEase. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function addToCart(product) {
+      alert(product + " has been added to your cart!");
+    }
+  </script>
+</body>
+</html>
